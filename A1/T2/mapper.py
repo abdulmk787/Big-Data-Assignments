@@ -22,5 +22,5 @@ for line in sys.stdin:
 		data = { "latitude": st_lat, "longitude": st_lng }
 		res = requests.post( url= URL, json = data)
 		place = res.json()
-		print('%s|%s|%s' %(place['state'].strip(),place['city'].strip(),1) )
+		print('%s,%s,%s' %(place['state'].strip(),place['city'].strip(),1) )
 	

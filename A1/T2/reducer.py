@@ -11,7 +11,7 @@ state_count=0
 for line in sys.stdin:
 	
 	line = line.strip()
-	state, city, count = line.split('|', 2)
+	state, city, count = line.split(',', 2)
 	try:
 		count = int(count)
 	except ValueError:

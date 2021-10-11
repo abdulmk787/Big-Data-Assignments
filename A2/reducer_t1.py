@@ -23,3 +23,4 @@ for line in sys.stdin:
         curr_src=source
     elif curr_src==source:
         print(',%d'%(dest),end='')
+        

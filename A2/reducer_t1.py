@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 from operator import itemgetter
 import sys
-v_file=open("/home/pes1ug19cs007/BD/A2/v",'a')
+path=sys.argv[1]
+v_file=open(path,'a')
 curr_src=-1
 for line in sys.stdin:
     line=line.strip()

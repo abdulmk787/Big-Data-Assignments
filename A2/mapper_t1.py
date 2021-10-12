@@ -2,7 +2,7 @@
 
 import sys
 import json
-path=sys.argv[1]
+
 
 for line in sys.stdin:
     line=line.strip()

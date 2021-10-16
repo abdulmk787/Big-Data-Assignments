@@ -7,17 +7,17 @@ $HADOOP_HOME/bin/hadoop dfsadmin -safemode leave
 hdfs dfs -rm -r /A2/output/task-* 
 
 hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.2.jar \
--mapper "'/home/pes1ug19cs007/BD/A2/mapper_t1.py'" \
--reducer "'/home/pes1ug19cs007/BD/A2/reducer_t1.py' '/home/pes1ug19cs007/BD/A2/v'" \
--input /A2/input/dataset-sample.txt \
+-mapper "'/home/pes1ug19cs007/BD/A2/T1/mapper.py'" \
+-reducer "'/home/pes1ug19cs007/BD/A2/T1/reducer.py' '/home/pes1ug19cs007/BD/A2/v'" \
+-input /A2/input/dataset_1percent.txt \
 -output /A2/output/task-1-output
 
 while [ "$CONVERGE" -ne 0 ]
 do
 	echo "############################# ITERATION $ITER #############################"
 	hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.2.2.jar \
-	-mapper "'/home/pes1ug19cs007/BD/A2/mapper_t2.py' '/home/pes1ug19cs007/BD/A2/v' '/home/pes1ug19cs007/BD/A2/embedding-sample.json'" \
-	-reducer "'/home/pes1ug19cs007/BD/A2/reducer_t2.py'" \
+	-mapper "'/home/pes1ug19cs007/BD/A2/T2/mapper.py' '/home/pes1ug19cs007/BD/A2/v' '/home/pes1ug19cs007/BD/A2/embedding_1percent.json'" \
+	-reducer "'/home/pes1ug19cs007/BD/A2/T2/reducer.py'" \
 	-input /A2/output/task-1-output/part-00000 \
 	-output /A2/output/task-2-output
 	touch v1

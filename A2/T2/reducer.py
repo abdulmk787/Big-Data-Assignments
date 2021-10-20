@@ -28,7 +28,7 @@ for i in dic.keys():
     if i in sd.keys():
         dic[i]+=sd[i]
 for i in dic.keys():
-    print('%d, %.2f'%(i,dic[i]))
+    print('%d,%.2f'%(i,dic[i]))
 
 
 

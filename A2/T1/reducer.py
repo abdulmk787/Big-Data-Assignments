@@ -2,7 +2,7 @@
 from operator import itemgetter
 import sys
 path=sys.argv[1]
-v_file=open(path,'a')
+v_file=open(path,'w')
 curr_src=-1
 for line in sys.stdin:
     line=line.strip()

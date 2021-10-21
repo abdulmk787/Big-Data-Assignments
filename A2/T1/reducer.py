@@ -25,3 +25,4 @@ for line in sys.stdin:
     elif curr_src==source:
         print(',%d'%(dest),end='')
         
+print(']')
